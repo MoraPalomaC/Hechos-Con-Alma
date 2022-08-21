@@ -127,3 +127,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+blog/__pycache__/views.cpython-310.pyc
