@@ -40,8 +40,6 @@ def Categoria(request, cate):
     post_ordenados = Post.objects.filter(categoria=cate.replace('-', ' '))
     una_cate = models.Categoria.objects.filter(nombre=cate.replace('-', ' '))
     context = una_cate.get()
-    descripcion = context.descripcion
-    print(descripcion)
     post_categorizados = post_ordenados.order_by('-fecha')
     return render(request, 'categorias.html', { 'cate': cate.title().replace('-',' '), 'post_categorizados': post_categorizados, 'descri':context.descripcion})
 

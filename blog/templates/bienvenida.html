@@ -71,80 +71,64 @@
     
         <!-- Navbar -->
         <!-- <nav class="navbar sticky-top navbar-expand-lg navbar-light d-none d-lg-block shadow-5-stron" style="z-index: 8000;"> -->
-            <nav class="navbar sticky-top navbar-expand-lg navbar-dark " style="background-color: rgba(115, 155, 160, 0.502); ">
-                <div class="container-fluid">
-                    <!-- Navbar brand -->
-                    <a class="navbar-brand nav-link" target="" href="{% url 'home' %}">
-                    <strong>HcA</strong>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-                    aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarExample01">
-                    
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                        <a class="nav-link" href="{% url 'bienvenida' %}" rel="nofollow">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="" rel="nofollow">Quienes Somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="" rel="nofollow">Proyectos</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Deseas Ayudar?</a>
-                        </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Secciones
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{% url 'categoria' 'huerta' %}">Huerta</a>
-                            <a class="dropdown-item" href="{% url 'categoria' 'general' %}">General</a>
-                            <a class="dropdown-item" href="{% url 'categoria' 'duelo' %}">Acompañamiento</a>
-                            <a class="dropdown-item" href="{% url 'categoria' 'radio' %}">Radio</a>
-                            <a class="dropdown-item" href="{% url 'categoria' 'boy-scouts' %}">Boy Scouts</a>
-                            <a class="dropdown-item" href="{% url 'categoria' 'merendero' %}">Merendero</a>
-                        </ul>
-                      </li>
-                    </ul>
-
-                    <ul class="navbar-nav d-flex flex-row ms-auto">
-                        <!-- Icons -->
-                        <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="https://www.youtube.com/channel/UClJ5l7IdTudvXs01MM161OA" rel="nofollow"
-                            target="_blank">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        </li>
-                        <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="https://www.facebook.com/Hechos-con-Alma-106138340788976/" rel="nofollow" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        </li>
-                        <!-- <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        </li> -->
-                        <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="https://www.instagram.com/hechocon_alma/" rel="nofollow" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        </li>
-                        {% if user.is_authenticated %}
-                        <a class="nav-link" href="{% url 'agregar_posteo' %}">Crear Post</a>
-                        <a class="nav-link" href="{% url 'logout' %}"style="text-align: right">Logout</a>
-                        {% endif %}
-                    </ul>
-                  </div>
-
-                </div>
-
-              </nav>
-              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark " style="background-color: rgba(115, 155, 160, 0.502); ">
+            <div class="container-fluid">
+            <!-- Navbar brand -->
+            <a class="navbar-brand nav-link" target="" href="{% url 'home' %}">
+            <strong>HcA</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+            aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarExample01">
+            
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'bienvenida' %}" rel="nofollow">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" rel="nofollow">Quienes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" rel="nofollow">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Deseas Ayudar?</a>
+                </li>
+            </ul>
+    
+            <ul class="navbar-nav d-flex flex-row">
+                <!-- Icons -->
+                <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://www.youtube.com/channel/UClJ5l7IdTudvXs01MM161OA" rel="nofollow"
+                    target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://www.facebook.com/Hechos-con-Alma-106138340788976/" rel="nofollow" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                </li>
+                <!-- <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                </li> -->
+                <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://www.instagram.com/hechocon_alma/" rel="nofollow" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                </li>
+                {% if user.is_authenticated %}
+                <a class="nav-link" href="{% url 'agregar_posteo' %}">Crear Post</a>
+                <a class="nav-link" href="{% url 'logout' %}"style="text-align: right">Logout</a>
+                {% endif %}
+            </ul>
+            </div>
+        </div>
+        </nav>
         <!-- Navbar -->
         {% block content %}
         <!-- Background image -->
